@@ -5,7 +5,7 @@ import (
 	"math"
 	"strconv"
 
-	"github.com/appditto/MonKey/server/color"
+	"github.com/paw-digital/Animal/server/color"
 )
 
 // Background Color

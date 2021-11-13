@@ -4,7 +4,6 @@ go 1.14
 
 require (
 	github.com/ajstarks/svgo v0.0.0-20200725142600-7a3c8b57fecb
-	github.com/paw-digital/Animal/server master
 	github.com/bsm/redislock v0.5.0
 	github.com/gin-gonic/gin v1.6.3
 	github.com/go-redis/redis/v7 v7.4.0
@@ -16,3 +15,4 @@ require (
 	google.golang.org/protobuf v1.25.0 // indirect
 	gopkg.in/gographics/imagick.v3 v3.3.0
 )
+

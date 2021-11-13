@@ -8,8 +8,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/appditto/MonKey/server/spc"
-	"github.com/appditto/MonKey/server/utils"
+	"github.com/paw-digital/Animal/server/spc"
+	"github.com/paw-digital/Animal/server/utils"
 	"github.com/bsm/redislock"
 	"github.com/go-redis/redis/v7"
 	"github.com/golang/glog"
@@ -18,7 +18,7 @@ import (
 // This is incredibly messy and should probably be done in SQL
 
 // Prefix for all keys
-const keyPrefix = "monKey"
+const keyPrefix = "animal"
 
 // Singleton to keep assets loaded in memory
 type redisManager struct {

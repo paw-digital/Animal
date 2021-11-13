@@ -15,7 +15,7 @@ import (
 )
 
 // DefaultSize SVG width/height attribute
-const DefaultSize = 4000
+const DefaultSize = 1080
 
 // Replace white with this color on bw assets
 const lodBwReplacement = "#9CA2AF"
@@ -38,7 +38,7 @@ func PureSVG(asset *Asset, withBackground bool) ([]byte, error) {
 	canvas := svg.New(&b)
 	canvas.Startraw(fmt.Sprintf("viewBox=\"0 0 %d %d\"", DefaultSize, DefaultSize), "fill=\"none\"")
 	if withBackground {
-		canvas.Rect(0, 0, 4000, 4000, fmt.Sprintf("id=\"%s\" fill=\"%s\"", "bg", asset.BGColor))
+		canvas.Rect(0, 0, DefaultSize, DefaultSize, fmt.Sprintf("id=\"%s\" fill=\"%s\"", "bg", asset.BGColor))
 	}
 	io.WriteString(canvas.Writer, pureSVG.Doc)
 	// End document
@@ -180,7 +180,7 @@ func CombineSVG(accessories Accessories) ([]byte, error) {
 	canvas.Startraw(fmt.Sprintf("viewBox=\"0 0 %d %d\"", DefaultSize, DefaultSize))
 
 	if accessories.BGColor != "" {
-		canvas.Rect(0, 0, 4000, 4000, fmt.Sprintf("id=\"%s\" fill=\"%s\"", "bg", accessories.BGColor))
+		canvas.Rect(0, 0, DefaultSize, DefaultSize, fmt.Sprintf("id=\"%s\" fill=\"%s\"", "bg", accessories.BGColor))
 	}
 
 	// Add tail
